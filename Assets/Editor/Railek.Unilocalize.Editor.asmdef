@@ -1,6 +1,9 @@
 {
     "name": "Railek.Unilocalize.Editor",
-    "references": [],
+    "references": [
+        "GUID:b1135243173b1124a89e24630fd454bb",
+        "GUID:b79c4a096a3c958419eb820620a783cb"
+    ],
     "includePlatforms": [
         "Editor"
     ],
