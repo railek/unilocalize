@@ -29,6 +29,7 @@ namespace Railek.Unilocalize
             serializedObject.ApplyModifiedProperties();
 
             if (!EditorGUI.EndChangeCheck()) return;
+
             if (target is T text)
             {
                 text.OnLocalize();

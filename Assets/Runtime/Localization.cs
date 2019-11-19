@@ -1,34 +1,14 @@
 ﻿using System;
 using UnityEngine;
 using System.Collections.Generic;
-using Railek.Unibase.Utilities;
 using Railek.Unibase.Helpers;
 using Railek.Unibase;
-#if UNITY_EDITOR
-using UnityEditor;
-#endif
 
 namespace Railek.Unilocalize
 {
     [Serializable]
     public class Localization : SingletonScriptableObject<Localization>
     {
-
-        #if UNITY_EDITOR
-        [MenuItem("Railek/Localization Settings")]
-        public static void MenuItem()
-        {
-            var asset = Resources.Load<Localization>("LocalizationSettings");
-            if (asset == null)
-            {
-                const string resourcesPath = "Assets/Resources/";
-                Asset.Create<Localization>(resourcesPath);
-            }
-
-            Selection.activeObject = asset;
-        }
-        #endif
-
         [SerializeField] private TextAsset inputFiles;
 
         public TextAsset InputFiles
@@ -64,7 +44,10 @@ namespace Railek.Unilocalize
 
         public void InvokeOnLocalize()
         {
-            voidEvent?.Raise();
+            if (voidEvent != null)
+            {
+                voidEvent.Raise();
+            }
         }
 
         public void SelectLanguage(int selected)
@@ -74,8 +57,6 @@ namespace Railek.Unilocalize
 
         public void AddOnLocalizeEvent(ILocalize localize)
         {
-            voidEvent.RemoveListener(localize.OnLocalize);
-            voidEvent.AddListener(localize.OnLocalize);
             localize.OnLocalize();
         }
 

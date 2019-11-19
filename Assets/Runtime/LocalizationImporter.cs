@@ -51,7 +51,6 @@ namespace Railek.Unilocalize
             text = text.Replace("\r\n", "\n");
 
             rows = CSVReader.Parse(text);
-
             Languages = rows.First();
 
             foreach (var row in rows)

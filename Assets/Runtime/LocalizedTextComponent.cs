@@ -6,8 +6,8 @@ namespace Railek.Unilocalize
     {
         [SerializeField] private T text;
 
-        [SerializeField]
-        private string key;
+        [SerializeField] private string key;
+
         public string Key
         {
             get => key;
