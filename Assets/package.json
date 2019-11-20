@@ -1,0 +1,22 @@
+{
+  "name": "com.railek.unilocalize",
+  "version": "0.1.0",
+  "displayName": "Unilocalize",
+  "description": "Localization tool for Unity that translates exclusively using a CSV file.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/railek/unilocalize"
+  },
+  "author": "Railek <jean@railek.com>",
+  "unity": "2019.2",
+  "license": "MIT",
+  "keywords": [
+    "tools",
+    "extensions",
+    "helpers"
+  ],
+  "bugs": {
+    "url": "https://github.com/railek/unilocalize/issues"
+  },
+  "homepage": "https://github.com/railek/unilocalize/#README"
+}
