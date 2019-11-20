@@ -40,7 +40,7 @@ namespace Railek.Unilocalize
             }
         }
 
-        [SerializeField] private VoidEvent voidEvent;
+        [SerializeField] private VoidEvent voidEvent = default(VoidEvent);
 
         public void InvokeOnLocalize()
         {
@@ -58,11 +58,6 @@ namespace Railek.Unilocalize
         public void AddOnLocalizeEvent(ILocalize localize)
         {
             localize.OnLocalize();
-        }
-
-        public void RemoveOnLocalizeEvent(ILocalize localize)
-        {
-            voidEvent.RemoveListener(localize.OnLocalize);
         }
     }
 }

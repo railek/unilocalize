@@ -78,7 +78,6 @@ namespace Railek.Unilocalize
 
             serializedObject.ApplyModifiedProperties();
 
-
             var localizedText = FindObjectsOfType<LocalizedText>();
             var localizedTextMeshPro = FindObjectsOfType<LocalizedTextMeshPro>();
 
